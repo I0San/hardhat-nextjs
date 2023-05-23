@@ -1,0 +1,65 @@
+{
+  "name": "@i0san/hardhat-nextjs",
+  "version": "1.0.0",
+  "description": "Hardhat plugin for generating a NextJS app with contract function and events implemented as hooks.",
+  "author": "IoSan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://i0san@github.com/I0San/hardhat-nextjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/I0San/hardhat-nextjs/issues"
+  },
+  "homepage": "https://github.com/I0San/hardhat-nextjs#readme",  
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "keywords": [
+    "hardhat",
+    "hardhat-plugin",
+    "smart-contracts",
+    "react-hooks",
+    "nextjs"
+  ],
+  "files": [
+    "dist/src/",
+    "src/",
+    "nextjs-app",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "build-package": "tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "lint:fix": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' && tslint --fix --config tslint.json --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "test": "mocha --exit --recursive 'test/**/*.test.ts'"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/fs-extra": "^5.0.4",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^8.10.38",
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-uglify": "^6.0.4",
+    "chai": "^4.2.0",
+    "hardhat": "^2.0.0",
+    "mocha": "^7.1.2",
+    "prettier": "2.0.5",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "hardhat": "^2.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
